@@ -14,11 +14,9 @@
   <strong>Rating:</strong>
   <%= @picture.rating %>
 </p>
-
 <p>
   <strong>Image:</strong>
-  <%= @picture.image %>
+  <%= image_tag(@picture.image_url, width: 600) if @picture.image.present? %>
 </p>
-
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
